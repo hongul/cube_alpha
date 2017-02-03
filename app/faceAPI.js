@@ -103,7 +103,13 @@ module.exports = {
    },
 
    trainingGroupStart: function(personGroup){
-      
+      client.face.personGroup.trainingStart(personGroup)
+      .then(function(){
+        console.log("training start");
+      })
+      .catch(function(err){
+        console.log(err);
+      })
    },
 
    resetPersonGroup: function(personGroup){

@@ -23,6 +23,7 @@ var faceUpload = multer({ storage: faceContainer})
 
 var face = require("./app/faceAPI"); 
 
+face.trainingGroupStart('test_one');
 //=============================================================
 
 app.post('/find',faceUpload.single('file'),function(req,res){
